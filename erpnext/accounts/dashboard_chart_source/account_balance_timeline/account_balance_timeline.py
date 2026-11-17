@@ -55,8 +55,7 @@ def get(
 	if not to_date:
 		to_date = nowdate()
 	if not from_date:
-		if timegrain in ("Monthly", "Quarterly"):
-			from_date = get_from_date_from_timespan(to_date, timespan)
+		from_date = get_from_date_from_timespan(to_date, timespan)
 
 	# fetch dates to plot
 	dates = get_dates_from_timegrain(from_date, to_date, timegrain)
